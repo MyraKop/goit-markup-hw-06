@@ -29,7 +29,6 @@ body {
 
 .container{
     width: 100%;
-    max-width: 1158px;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
@@ -236,18 +235,14 @@ background-repeat: no-repeat;
 
 .content-item {
     width: 100%;
-   /* width: calc((100%-72) / 4);*/
+   /* width: calc((100%-72px) / 4);*/
 }
-.content-block {
-    height: 112px;
-    background-color: var(--cloud);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 8px;
+
+.content-block{
     display: none;
 }
+
+
 .content-subtitle {
     color: var(--navyblue);
         /* font-size: 20px; */
@@ -273,6 +268,7 @@ background-repeat: no-repeat;
 
 .action{
     padding-bottom: 120px;
+    display: none;
 }
 
 .action-title {
@@ -306,7 +302,8 @@ background-repeat: no-repeat;
 
 .team {
     background: var(--cloud);
-padding: 120px 0;
+    padding: 96px 50px;
+/* padding: 120px 0; */
 }
 
 .team-title {
@@ -328,7 +325,9 @@ padding: 120px 0;
 
 .team-list {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    gap: 72px;
+    /* gap: 24px; */
 }
 
 .team-list-container{
@@ -336,15 +335,16 @@ padding: 120px 0;
 }
 
 .team-item {
+    
+    width: 100%;
         background: var(--white);
     border-radius: 0px 0px 4px 4px;
     }
 
 
- 
-
 .team-img {
-width: calc((100%-24*3) / 4);
+    width: 100%;
+/* width: calc((100%-24*3) / 4); */
 display: block;
 }
 
@@ -988,6 +988,7 @@ color: var(--white);
      max-width: 428px;    
     }
    
+   
 }
 
 @media screen and (min-width:768px) {
@@ -1001,7 +1002,54 @@ color: var(--white);
             padding-bottom: 96px;
     }
 
-   .content-item{
-    width: calc((100%-24)/2);
+   .content-list{
+     gap: 72px 24px;
    }
+
+   .content-item{
+    width: calc(( 100% - 24px ) / 2 );
+   }
+
+   .content-block{
+    display: none;
+   }
+
+   .content-subtitle{
+    text-align: start;
+   }
+}
+
+@media screen and (min-width:1158px) {
+    .container {
+        max-width: 1158px;
+    }
+
+    .content{
+        padding: 120px 0;
+    }
+
+    .content-list{
+        gap:24px;
+    }
+
+    .content-item{
+        width: calc(( 100% - 72px ) / 4 );
+    }
+
+        .content-block {
+            width: 264px;
+            height: 112px;
+            background-color: var(--cloud);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .content-subtitle{
+        font-size: 20px;
+        font-weight: 500;   
+        }
+        
 }
