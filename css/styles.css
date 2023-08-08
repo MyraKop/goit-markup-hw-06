@@ -38,7 +38,6 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    outline: 2px solid red;
 }
 
 .visually-hidden {
@@ -606,7 +605,7 @@ color: var(--navyblue, #2E2F42);
     align-items: center;
     justify-content: center;
         /* margin-right: 80px; */
-        outline: 2px solid red;
+        
 }
 
 .footer-socials-list {
@@ -655,7 +654,7 @@ color: var(--navyblue, #2E2F42);
 .footer-subscribe{
     display: flex;
     flex-direction: column;
-        outline: 2px solid red;
+        
 }
 
 
